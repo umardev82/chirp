@@ -40,5 +40,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], function () {
+    Route::get('dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'dashboard'])->name('dashboard');
+    Route::resource('urls', \App\Http\Controllers\Admin\UrlController::class);
+});
 
 require __DIR__.'/auth.php';
+Route::get('{short}', [\App\Http\Controllers\UrlController::class, 'shortenLink'])->name('shortener-url');
