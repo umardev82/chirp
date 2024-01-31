@@ -23,3 +23,5 @@ class UrlController extends Controller
         return redirect($find->original_url);
     }
 }
+
+
