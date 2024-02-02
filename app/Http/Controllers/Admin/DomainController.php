@@ -45,15 +45,19 @@ class DomainController extends Controller
      */
     public function store(StoreDomainRequest $request)
     {
-        $request->validate([
+        $validatedData = $request->validate([
             'domain' => 'required|string|max:255',
             'status' => 'required|string|max:255',
         ]);
-        $data = $request->all();
-        $data['domain'] = Str::slug($request->domain);
-        $data['status'] = $request->status;
+
+        $data = [
+            'domain' => $validatedData['domain'],
+            'status' => $validatedData['status'],
+        ];
+
         Domain::create($data);
-        return to_route('admin.domains.index');
+
+        return redirect()->route('admin.domains.index');
     }
 
 
