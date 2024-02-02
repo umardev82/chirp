@@ -43,19 +43,16 @@ import { Link } from "@inertiajs/vue3";
                         :active="route().current('admin.domains.index')"
                         :class="{ 'bg-gray-100 bg-gray-700': route().current('admin.domains.*') }">
                     <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd"
-                            d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.6 4.6c1.2 1.5 2 3.4 2 5.3-2-.4-4-.4-6-.2l-.2-.5-.6-1.2c1.9-.7 3.5-1.9 4.8-3.4ZM10 3.7l2-.2c2 0 4.1.7 5.7 2.1a9.6 9.6 0 0 1-4.5 3.1c-1-1.7-2-3.4-3.2-5Zm-6.4 6.6a8.6 8.6 0 0 1 4.8-6 54 54 0 0 1 3.1 5 32 32 0 0 1-7.9 1Zm2 7.4a8.5 8.5 0 0 1-2-5.7v-.2c3 0 5.9-.5 8.7-1.3L13 12h-.3a14.5 14.5 0 0 0-7 5.7Zm6.4 2.9c-1.9 0-3.7-.7-5.2-1.8a11.7 11.7 0 0 1 6.7-5.4c.8 2.1 1.4 4.3 1.8 6.5-1 .4-2.2.7-3.3.7Zm4.8-1.5c-.4-2-1-4.1-1.7-6.1 1.8-.3 3.6-.1 5.3.4a8.6 8.6 0 0 1-3.6 5.7Z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-                    <span class="flex-1 ms-3 whitespace-nowrap">Domain</span>
-                    <!--                        <span class="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span>-->
-                    </Link>
-                </li>
-            </ul>
-        </div>
-    </aside>
-</template>
+                        fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 16H5a1 1 0 0 1-1-1V5c0-.6.4-1 1-1h14c.6 0 1 .4 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+                </svg>
+                <span class="flex-1 ms-3 whitespace-nowrap">Domain</span>
+                <!--                        <span class="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span>-->
+                </Link>
+            </li>
+        </ul>
+    </div>
+</aside></template>
 
 <style scoped></style>
