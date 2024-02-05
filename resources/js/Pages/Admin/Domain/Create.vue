@@ -8,7 +8,6 @@ let props = defineProps({
     },
 });
 
-
 let form = useForm({
     domain: '',
     status: '',
@@ -17,7 +16,7 @@ let form = useForm({
 </script>
 
 <template>
-    <Admin>
+    <Admin :auth="auth">
         <nav aria-label="Breadcrumb" class="flex mb-4">
             <ol class="inline-flex items-center space-x-1 md:space-x-3 rtl:space-x-reverse">
                 <li class="inline-flex items-center">
