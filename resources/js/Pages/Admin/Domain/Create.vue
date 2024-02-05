@@ -59,7 +59,7 @@ let form = useForm({
         </nav>
         <div class="flex justify-between">
             <h2 class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl">Create
-                Locking
+
                 Domain</h2>
         </div>
 
@@ -76,10 +76,17 @@ let form = useForm({
                     <!--                    </p>-->
                 </div>
                 <div class="mb-5">
-                    <label class="block mb-2 text-sm font-medium text-green-700" for="status">Status</label>
-                    <input v-model="form.status" id="status"
-                        class="border text-green-900 placeholder-green-700 text-sm rounded-lg block w-full p-2.5"
-                        placeholder="Status" type="text" required>
+
+                    <label for="status" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Status</label>
+                    <select v-model="form.status" id="status"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option disabled value>Choose a Status</option>
+                        <option value="active">Active</option>
+                        <option value="disable">Disable</option>
+
+                    </select>
+
                     <!--                    <p class="mt-2 text-sm text-green-600 dark:text-green-500"><span class="font-medium">Alright!</span>-->
                     <!--                        Username available!-->
                     <!--                    </p>-->
