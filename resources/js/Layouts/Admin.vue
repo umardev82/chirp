@@ -3,7 +3,12 @@
 import {Link} from '@inertiajs/vue3';
 import Nav from "@/Components/Admin/Nav.vue";
 import Aside from "@/Components/Admin/Aside.vue";
+import {onMounted} from "vue";
+import { initFlowbite } from "flowbite";
 
+onMounted(() => {
+    initFlowbite()
+});
 </script>
 
 <template>

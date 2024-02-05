@@ -5,9 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreDomainRequest;
 use App\Http\Requests\UpdateDomainRequest;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Str;
 use App\Models\Domain;
+use Illuminate\Support\Str;
 use Inertia\Inertia;
 
 
@@ -20,15 +19,11 @@ class DomainController extends Controller
 
     public function index()
     {
-
-          $domains = Domain::with('user')->latest()->get();
-
-         # dd($domains);
-
-          return Inertia::render('Admin/Domain/Index', [
-              'domains' => $domains,
-              'domain' => config('app.domain'),
-          ]);
+        $domains = Domain::with('user')->latest()->get();
+        return Inertia::render('Admin/Domain/Index', [
+            'domains' => $domains,
+            'domain' => config('app.domain'),
+        ]);
 
     }
 

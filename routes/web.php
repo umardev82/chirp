@@ -40,8 +40,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], function () {
-    Route::get('dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'dashbo ard'])->name('dashboard');
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth', 'admin']], function () {
+    Route::get('dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'dashboard'])->name('dashboard');
     Route::resource('urls', \App\Http\Controllers\Admin\UrlController::class);
     Route::resource('domains', \App\Http\Controllers\Admin\DomainController::class);
 });

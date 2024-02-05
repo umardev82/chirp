@@ -1,0 +1,25 @@
+Admin panel:
+site management, publisher management, offers management, content lock template management, withdrawal methods management,
+Publisher Panel:
+Create special links for each selected content lock page,
+earn a specific commission for each successful conversion, withdraw profits.
+
+
+Admin panel: site management, publisher management, offers management, content lock template management, withdrawal methods management,
+
+
+Publisher Panel: Create special links for each selected content lock page, earn a specific commission for each successful conversion, withdraw profits.
+
+
+Hello my friend, I want you to add a system for accepting or rejecting publishers (sending an email either accepting or rejecting ),
+in addition to requesting information from those in the registration, such as the country, phone number, and source of traffic,
+asking where she met us from, and adding a field to put the preferred platform to communicate with her, such as Telegram.
+
+
+As for offers, I will specify the devices on which the offers should appear, the countries, the offer title,
+the offer description, and the amount I will pay for each successful conversion.
+This means that when a publisher creates a content lock and gets a link,
+then promotes it and then the traffic comes in,
+that lock displays country-appropriate offers. From which visitors and devices come,
+and for every successful conversion,
+the publisher gets the commission set for that completed offer
